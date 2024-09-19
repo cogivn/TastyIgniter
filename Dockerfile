@@ -1,4 +1,4 @@
-FROM php:7.4-apache
+FROM php:8.2-fpm
 
 # install the PHP extensions we need
 RUN set -ex; \
@@ -39,7 +39,7 @@ RUN a2enmod rewrite
 
 VOLUME /var/www/html
 
-ENV TASTYIGNITER_VERSION 3.4.0
+ENV TASTYIGNITER_VERSION 3.7.7
 
 RUN set -ex; \
 	curl -o tastyigniter.zip -fSL "https://codeload.github.com/tastyigniter/TastyIgniter/zip/v${TASTYIGNITER_VERSION}"; \
